@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2? family= Roboto:ital,wght@0,300;0,400;0,700;0,900;1,500;1,900 & display=swap');
+/* Initialsation de notre projet */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+/* Initialisation de nos variables */
+html{
+    --var-bg-color:#117DBF;
+    --var-secondary-color:#40739e;
+    --var-text-color:#fff;
+    --var-text-color-dart:#333;
+    --var-bg-light:#F0F4FF;
+    --var-bg-dart:#c9d4f358;
+    --var-bg-logo1:#D95F76;
+    --var-bg-logo2:#F2C9D1;
+    --var-bg-logo3:#BF1B39;
+}
+body{
+    font-family:'roboto';
+    background-color: var(--var-bg-light);
+    color: var(--var-text-color-dart);
+}
+header{
+    height: 4rem;
+    background-color: #fff;
+    padding: 0 2rem;
+    text-align: center;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+header nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+}
+header a .logo{
+    margin-top:10px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--var-text-color-dart);
+    font-weight: 500;
+    transition: .3s;
+}
+nav ul li a:hover{
+    color: var(--var-bg-logo3);
+}
+header button{
+    background-color: var(--var-secondary-color);
+    color: var(--var-text-color);
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .4s;
+}
+header button:hover{
+    background-color: var(--var-bg-logo1);
+    border: 1px solid var(--var-bg-light);
+    color: var(--var-text-color-dart);
+}
+/* Mise en style de la section main */
+main{
+    padding: 2rem;
+}
+#main{
+    width: 100%;
+    height: 70vh;
+    border-radius: 5px;
+    padding: 1rem;
+    background: linear-gradient(90deg,
+    var(--var-bg-color) 15%, 
+    var(--var-secondary-color)100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main .gauche h1{
+   font-size: 3rem;
+   font-weight: 600;
+   color: var(--var-text-color);
+}
+#main .gauche h1 span{
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-weight: bold;
+   color: var(--var-text-color);
+}
+
+#main .gauche p{
+   font-size: clamp(1rem,2vw,1rem);
+   color: #ccc;
+   /* text-align: justify; */
+}
+#main .gauche p span{
+   color: #fff;
+   font-weight: bold;
+}
+.gauche button{
+    background-color: var(--var-text-color);
+    color: var(--var-text-color-dart);
+    margin-top: 1.4rem;
+    border: none;
+    padding: 0.9rem 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+.droite{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.droite img {
+    width: 80%;
+    height: 90%;
+    /* object-fit: cover; */
+    z-index: 100;
+}
+.effets{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.effets .cercle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: animation 4s ease-in-out infinite;
+}
+.cercle:nth-child(1){
+    background:linear-gradient(90deg, var(--var-bg-color)15%,
+var(--var-bg-logo2) 100%);
+    position: absolute;
+    right: 10px;
+    animation-delay: 1s;
+}
+.cercle:nth-child(2){
+    background:linear-gradient(90deg, var(--var-bg-color)15%,
+    var(--var-bg-logo2) 100%);
+    position: absolute;
+    left: 10px;
+    animation-delay: .5s;
+}
+.cercle:nth-child(3){
+    background:linear-gradient(90deg, var(--var-bg-color)15%,
+    var(--var-bg-logo2) 100%);
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    animation-delay: .8s;
+}
+@keyframes animation {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/* la partie service */
+#objectif{
+    margin-top: 2rem;
+}
+#objectif h2{
+    text-align: center;
+    background: var(--var-bg-dart);
+    border-radius: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 1rem;
+    transition: .5s;
+}
+.list-objectif{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.list-objectif .objectif-card{
+    flex: 1;
+    background-color: var(--var-text-color);
+    padding: 1rem;
+    border-radius: 8px;
+    position: relative;
+    transition: 1s;
+}
+.objectif-card .icons{
+    background-color: var(--var-bg-logo1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    position: absolute;
+    top: -25px;
+}
+.objectif-card .icons i{
+    font-size: 1.3rem;
+    color: var(--var-text-color);
+    width: 30px;
+    height: 30px;
+}
+.objectif-card h3{
+    margin-top: 1.2rem;
+}
+.objectif-card p{
+    margin-top: 0.6rem;
+    text-align: justify;
+}
+.list-objectif .objectif-card:hover{
+    background-color: var(--var-bg-logo2);
+}
+/* mise en forme de la partie album */
+.album{
+    margin-top: 2rem;
+}
+.album h2{
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    background: var(--var-bg-dart);
+    border-radius: 1rem;
+    transition: .4s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.album .photo{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.photo img{
+  width: 100%;
+  border-radius: 5px;
+}
+#contact{
+    margin-top: 3rem;
+    display: flex;
+    height: calc(100vh - 200px);
+    background-color: var(--var-text-color);
+}
+#contact .partie1, .partie2{
+    flex: 1;
+    border-radius: 5px;
+    padding: 1rem;
+    position: relative;
+    margin-bottom: 1rem;
+    height: 100%;
+}
+#contact .partie1{
+    background-color: var(--var-bg-logo1);
+    display: flex;
+    text-align: justify;
+    color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contact .partie1 p{
+    color: #ccc;
+    font-size: 1rem;
+}
+#contact h2{
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.partie2 form{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.partie2 form input,textarea{
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.partie2 form textarea{
+    height: 120px;
+}
+.partie2 form input,textarea:hover{
+    border: 1px solid var(--var-bg-logo1);
+}
+.partie2 form button{
+    background-color: var(--var-secondary-color);
+    color: var(--var-text-color);
+    border: none;
+    padding: 0.9rem 1rem;
+    border-radius: 0.3rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.partie2 form button:hover{
+    background-color: var(--var-bg-logo1);
+}
+/* Mise en forme du footer */
+footer{
+    width: 100%;
+    height: 100%;
+    background-color: var(--var-text-color);
+    text-align: center;
+    margin-top: 3rem;
+    display: flex;
+    padding: 2rem;
+    color: var(--var-bg-color);
+    justify-content: center;
+    align-items: center;
+}
+.reseau{
+    position: fixed;
+    right: 0;
+    bottom: 2rem;
+    background-color: var(--var-bg-logo1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5;
+
+}
+.reseau .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.reseau .card i{
+   color: #fff;
+}
+.card:hover{
+    background-color: var(--var-secondary-color);
+    border-radius: 50%;
+}
+/* Les medais queries */
+@media screen  and (max-width:768px){
+    header nav{
+        display: none;
+    }
+    #main{
+        flex-direction: column;
+        min-height: 100vh;
+        gap: 10px;
+    }
+    .gauche{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    #main .gauche h1{
+        font-size: 35px;
+    }
+    /* la partie service */
+    .list-objectif{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    #contact{
+        flex-direction: column;
+        min-height: 100vh;
+    }
+   #contact h2{
+     font-size: 1.9rem;
+   } 
+   .album h2{
+    font-size: 2rem;
+   }
+   #objectif h2{
+    font-size: 2rem;
+   }
+   #main .gauche h1{
+   font-size: 1.8rem;
+   font-weight: 500;
+   color: var(--var-text-color);
+}
+}
